@@ -1,0 +1,78 @@
+* {
+  overflow-x: hidden;
+  background-color: #dedede;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  background-color: rgb(196, 0, 0);
+  color: white !important;
+  padding: 10px;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bolder;
+}
+
+#output {
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr fit-content(20%);
+  align-items: center;
+  /* grid-template-columns: auto auto auto auto auto; */
+}
+
+#output .card {
+  margin: 10px;
+  height: 55vh;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+@media only screen and (max-width: 1546px) {
+  #output {
+    grid-template-columns: auto auto auto auto;
+  }
+}
+
+@media only screen and (max-width: 1233px) {
+  #output {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media only screen and (max-width: 936px) {
+  #output {
+    grid-template-columns: auto auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #output {
+    grid-template-columns: auto;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+#output .card:hover{
+    transform: scale(1.03);
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+}
+
+#output .card img:hover{
+    transform: scale(1.06);
+    transition: 0.3s ease-in-out;
+}
+
+#output .card .card-text{
+    /* overflow-y: hidden; */
+    font-size: 12px;
+}
+
+#output .card .card-title{
+    overflow-y: hidden;
+    font-size: 15px;
+}
